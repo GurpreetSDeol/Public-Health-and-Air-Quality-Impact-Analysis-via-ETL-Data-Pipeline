@@ -1,0 +1,98 @@
+[
+    {
+        "coord": {
+            "lon": 139.692,
+            "lat": 35.6897
+        },
+        "weather": [
+            {
+                "id": 803,
+                "main": "Clouds",
+                "description": "broken clouds",
+                "icon": "04d"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 300.3,
+            "feels_like": 303.98,
+            "temp_min": 298.57,
+            "temp_max": 301.27,
+            "pressure": 1009,
+            "humidity": 87,
+            "sea_level": 1009,
+            "grnd_level": 1007
+        },
+        "visibility": 10000,
+        "wind": {
+            "speed": 7.2,
+            "deg": 190
+        },
+        "clouds": {
+            "all": 75
+        },
+        "dt": 1725225306,
+        "sys": {
+            "type": 2,
+            "id": 268395,
+            "country": "JP",
+            "sunrise": 1725221648,
+            "sunset": 1725268092
+        },
+        "timezone": 32400,
+        "id": 1850144,
+        "name": "Tokyo",
+        "cod": 200,
+        "latitude": 35.6897,
+        "longitude": 139.692,
+        "city_id": 1
+    },
+    {
+        "coord": {
+            "lon": 77.23,
+            "lat": 28.66
+        },
+        "weather": [
+            {
+                "id": 701,
+                "main": "Mist",
+                "description": "mist",
+                "icon": "50n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 301.21,
+            "feels_like": 307.83,
+            "temp_min": 301.21,
+            "temp_max": 301.21,
+            "pressure": 1004,
+            "humidity": 94,
+            "sea_level": 1004,
+            "grnd_level": 979
+        },
+        "visibility": 3000,
+        "wind": {
+            "speed": 2.57,
+            "deg": 90
+        },
+        "clouds": {
+            "all": 75
+        },
+        "dt": 1725225052,
+        "sys": {
+            "type": 1,
+            "id": 9165,
+            "country": "IN",
+            "sunrise": 1725236992,
+            "sunset": 1725282723
+        },
+        "timezone": 19800,
+        "id": 1273294,
+        "name": "Delhi",
+        "cod": 200,
+        "latitude": 28.66,
+        "longitude": 77.23,
+        "city_id": 2
+    }
+]

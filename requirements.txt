@@ -1,0 +1,7 @@
+requests
+pandas
+json_flatten
+SQLAlchemy
+pytz
+timezonefinder
+psycopg2-binary
