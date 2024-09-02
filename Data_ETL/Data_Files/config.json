@@ -3,7 +3,7 @@
     "Nin_api_key" : "moIsb6GGrVPEVN0UzWFQhA==HLX28kq15hgK6EcC",
     "db_name" : "Weather and Pollution",
     "user" : "postgres",
-    "password" : "Gopi2131",
+    "password" : "",
     "host" : "host.docker.internal",
     "port" : "5432"
     }
