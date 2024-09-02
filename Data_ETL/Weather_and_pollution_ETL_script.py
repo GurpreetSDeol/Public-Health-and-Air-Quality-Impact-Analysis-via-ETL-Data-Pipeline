@@ -9,7 +9,7 @@ import pytz
 from timezonefinder import TimezoneFinder
 
 #Load all credentials 
-with open(rf'Data_ETL\Data_Files\config.json') as config_file:
+with open(rf'config.json') as config_file:
     config = json.load(config_file)
 
 OW_api_key = config['OW_api_key']
@@ -20,11 +20,9 @@ db_host = config['host']
 db_port = config['port']
 
 #Load data containing cities for the API
-json_save_path = rf'Data_ETL\Data_Files\Final_city_data.json'
+json_save_path = rf'Final_city_data.json'
 with open(json_save_path) as f:
     city_data = json.load(f)
-
-city_data = city_data[:2]
 
 #Weather and Pollution API requests
 OW_weather_data = []
