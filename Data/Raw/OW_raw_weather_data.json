@@ -1,43 +1,43 @@
 [
     {
         "coord": {
-            "lon": 139.692,
-            "lat": 35.6897
+            "lon": 139.6917,
+            "lat": 35.6895
         },
         "weather": [
             {
-                "id": 803,
+                "id": 801,
                 "main": "Clouds",
-                "description": "broken clouds",
-                "icon": "04d"
+                "description": "few clouds",
+                "icon": "02n"
             }
         ],
         "base": "stations",
         "main": {
-            "temp": 300.3,
-            "feels_like": 303.98,
-            "temp_min": 298.57,
-            "temp_max": 301.27,
+            "temp": 300.7,
+            "feels_like": 304.41,
+            "temp_min": 300.12,
+            "temp_max": 301.28,
             "pressure": 1009,
-            "humidity": 87,
+            "humidity": 82,
             "sea_level": 1009,
             "grnd_level": 1007
         },
         "visibility": 10000,
         "wind": {
-            "speed": 7.2,
-            "deg": 190
+            "speed": 6.17,
+            "deg": 210
         },
         "clouds": {
-            "all": 75
+            "all": 20
         },
-        "dt": 1725225306,
+        "dt": 1725291906,
         "sys": {
             "type": 2,
-            "id": 268395,
+            "id": 2001249,
             "country": "JP",
-            "sunrise": 1725221648,
-            "sunset": 1725268092
+            "sunrise": 1725308093,
+            "sunset": 1725354408
         },
         "timezone": 32400,
         "id": 1850144,
@@ -62,24 +62,24 @@
         ],
         "base": "stations",
         "main": {
-            "temp": 301.21,
-            "feels_like": 307.83,
-            "temp_min": 301.21,
-            "temp_max": 301.21,
-            "pressure": 1004,
-            "humidity": 94,
-            "sea_level": 1004,
-            "grnd_level": 979
+            "temp": 303.21,
+            "feels_like": 310.21,
+            "temp_min": 303.21,
+            "temp_max": 303.21,
+            "pressure": 1007,
+            "humidity": 84,
+            "sea_level": 1007,
+            "grnd_level": 981
         },
-        "visibility": 3000,
+        "visibility": 4000,
         "wind": {
-            "speed": 2.57,
-            "deg": 90
+            "speed": 2.06,
+            "deg": 80
         },
         "clouds": {
-            "all": 75
+            "all": 40
         },
-        "dt": 1725225052,
+        "dt": 1725292251,
         "sys": {
             "type": 1,
             "id": 9165,

@@ -3,13 +3,14 @@ import json
 import pandas as pd 
 import time
 from json_flatten import flatten
-from sqlalchemy import create_engine
 from datetime import datetime
 import pytz
 from timezonefinder import TimezoneFinder
+import psycopg2
+from psycopg2.extras import execute_batch
 
 #Load all credentials 
-with open(rf'config.json') as config_file:
+with open(rf'Data_ETL\config.json') as config_file:
     config = json.load(config_file)
 
 OW_api_key = config['OW_api_key']
@@ -20,7 +21,7 @@ db_host = config['host']
 db_port = config['port']
 
 #Load data containing cities for the API
-json_save_path = rf'Final_city_data.json'
+json_save_path = rf'Data_ETL\Final_city_data.json'
 with open(json_save_path) as f:
     city_data = json.load(f)
 
@@ -28,6 +29,8 @@ with open(json_save_path) as f:
 OW_weather_data = []
 OW_pollution_data = []
 delay = 2
+
+city_data = city_data[:10]
 
 for city in city_data:
 
@@ -208,23 +211,44 @@ pollution_data_df=pollution_data_df.drop(columns=['latitude','longitude'])
 
 
 #Upload data to PostgreSQL database 
-engine = create_engine(f'postgresql+psycopg2://{db_user}:{db_pass}\
-@{db_host}:{db_port}/{db_name}')
 
 
 timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-weather_csv_path = rf'Data\Failed_to_Upload\weather_data_{timestamp}.csv'
-pollution_csv_path = rf'Data\Failed_to_Upload\pollution_data_{timestamp}.csv'
+weather_csv_path = rf'Data\Failed_to_Upload\Weather\Weather_{timestamp}.csv'
+pollution_csv_path = rf'Data\Failed_to_Upload\Pollution\pollution_{timestamp}.csv'
 
+
+# Connect to the PostgreSQL database
+conn = psycopg2.connect(dbname=db_name, user=db_user, password=db_pass, host=db_host, port=db_port)
+cursor = conn.cursor()
+
+def bulk_insert_pandas(df, table_name):
+    columns = ', '.join(df.columns)
+    values = ', '.join([f"%({col})s" for col in df.columns])
+    sql = f"INSERT INTO {table_name} ({columns}) VALUES ({values})"
+    
+    # Convert DataFrame to list of dicts
+    data = df.to_dict(orient='records')
+    
+    # Execute the bulk insert
+    execute_batch(cursor, sql, data)
+    conn.commit()
+
+
+# Upload data
 try:
-    weather_data_df.to_sql('weather', con=engine, if_exists='append', index=False)
-
+    bulk_insert_pandas(weather_data_df, 'weather')
 except Exception as e:
+    print(f"Error uploading weather data: {e}")
     weather_data_df.to_csv(weather_csv_path, index=False)
 
 try:
-    pollution_data_df.to_sql('pollution', con=engine, if_exists='append', index=False)
-
+    bulk_insert_pandas(pollution_data_df, 'pollution')
 except Exception as e:
+    print(f"Error uploading pollution data: {e}")
     pollution_data_df.to_csv(pollution_csv_path, index=False)
+
+# Close the connection
+cursor.close()
+conn.close()
     

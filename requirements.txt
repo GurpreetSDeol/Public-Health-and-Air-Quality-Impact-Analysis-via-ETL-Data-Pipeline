@@ -1,7 +1,7 @@
 requests
 pandas
-json_flatten
 SQLAlchemy
 pytz
 timezonefinder
-psycopg2-binary
+psycopg2
+json_flatten   
