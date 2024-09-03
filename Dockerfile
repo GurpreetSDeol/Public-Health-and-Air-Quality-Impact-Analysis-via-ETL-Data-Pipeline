@@ -14,6 +14,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY Data_ETL/Weather_and_pollution_ETL_script.py .
 COPY Data_ETL/config.json .
 COPY Data_ETL/Final_city_data.json .
-
+ 
 # Set the default command to run the ETL script
 CMD ["python", "Weather_and_pollution_ETL_script.py"]

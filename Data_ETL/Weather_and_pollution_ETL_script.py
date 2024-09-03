@@ -10,7 +10,7 @@ import psycopg2
 from psycopg2.extras import execute_batch
 
 #Load all credentials 
-with open(rf'Data_ETL\config.json') as config_file:
+with open(rf'config.json') as config_file:
     config = json.load(config_file)
 
 OW_api_key = config['OW_api_key']
@@ -21,7 +21,7 @@ db_host = config['host']
 db_port = config['port']
 
 #Load data containing cities for the API
-json_save_path = rf'Data_ETL\Final_city_data.json'
+json_save_path = rf'Final_city_data.json'
 with open(json_save_path) as f:
     city_data = json.load(f)
 
@@ -29,9 +29,8 @@ with open(json_save_path) as f:
 OW_weather_data = []
 OW_pollution_data = []
 delay = 2
-
-city_data = city_data[:10]
-
+units = "metric"
+city_data = city_data[:50]
 for city in city_data:
 
      #Load the longitude and latitude data for each city
@@ -40,7 +39,7 @@ for city in city_data:
      city_id = city['city_id']
 
      #Fetch the current weather data 
-     OW_weather_url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OW_api_key}'
+     OW_weather_url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units={units}&appid={OW_api_key}'
      response_weather = requests.get(OW_weather_url)
      weather_data = response_weather.json()
      weather_data['latitude'] = lat
@@ -50,7 +49,7 @@ for city in city_data:
      time.sleep(delay)
 
      #Fetch the current air quality data
-     OW_pollution_url = f'http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={OW_api_key}'
+     OW_pollution_url = f'http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&units={units}&appid={OW_api_key}'
      response_pollution = requests.get(OW_pollution_url)
      pollution_data = response_pollution.json()
      pollution_data['latitude'] = lat
@@ -238,12 +237,14 @@ def bulk_insert_pandas(df, table_name):
 # Upload data
 try:
     bulk_insert_pandas(weather_data_df, 'weather')
+    weather_data_df.to_csv(weather_csv_path, index=False)
 except Exception as e:
     print(f"Error uploading weather data: {e}")
     weather_data_df.to_csv(weather_csv_path, index=False)
 
 try:
     bulk_insert_pandas(pollution_data_df, 'pollution')
+    pollution_data_df.to_csv(pollution_csv_path, index=False)
 except Exception as e:
     print(f"Error uploading pollution data: {e}")
     pollution_data_df.to_csv(pollution_csv_path, index=False)
