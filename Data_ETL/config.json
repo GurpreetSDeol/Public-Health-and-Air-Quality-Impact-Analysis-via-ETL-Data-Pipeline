@@ -1,0 +1,11 @@
+{
+    "OW_api_key" : "1bb3d74b03e16c97feaddad9963cd29d",
+    "Nin_api_key" : "moIsb6GGrVPEVN0UzWFQhA==HLX28kq15hgK6EcC",
+    "db_name" : "Weather and Pollution",
+    "user" : "postgres",
+    "password" : "Gopi2131",
+    "host"  : "host.docker.internal",
+    "port" : "5432"
+    }
+
+    
