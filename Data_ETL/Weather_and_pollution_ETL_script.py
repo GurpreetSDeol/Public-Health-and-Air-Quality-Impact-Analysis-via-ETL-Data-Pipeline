@@ -83,7 +83,7 @@ def rename_and_convert_columns(df, column_map):
             elif dtype == 'datetime':
                 # Explicitly cast to numeric before converting to datetime
                 df[new_col] = pd.to_datetime(pd.to_numeric(df[new_col], errors='coerce'), unit='s', errors='coerce')
-                df[new_col] = df[new_col].dt.round('h')
+                df[new_col] = df[new_col].dt.round('min')
     return df
 
 
