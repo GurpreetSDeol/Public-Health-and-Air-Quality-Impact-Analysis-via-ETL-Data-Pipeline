@@ -2,8 +2,10 @@
 The goal of this project is to analyse and monitor weather and air pollution data for major global cities using a time series approach. This pipeline extracts real-time data from public APIs, stores it in a PostgreSQL database, and performs exploratory and time series analysis. The project focuses on identifying correlations between weather conditions and pollution levels, as well as forecasting future pollution trends.
 
 # Data Sources
-OpenWeather API: Provides real-time weather and air pollution data.
-API Ninjas: Used to gather population, latitude, and longitude data for city selection.
+
+__OpenWeather API__: Provides real-time weather and air pollution data.
+
+__API Ninjas__: Used to gather population, latitude, and longitude data for city selection.
 
 # Project Structure and Contents
 
