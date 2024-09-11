@@ -1,5 +1,12 @@
 # Overview
-The goal of this project is to analyse and monitor weather and air pollution data for major global cities using a time series approach. This pipeline extracts real-time data from public APIs, stores it in a PostgreSQL database, and performs exploratory and time series analysis. The project focuses on identifying correlations between weather conditions and pollution levels, as well as forecasting future pollution trends.
+The goal of this project is to analyse and monitor weather and air pollution data for major global cities using a time series approach. This pipeline extracts real-time data from public APIs, stores it in a PostgreSQL database, and performs exploratory and time series analysis. The project focuses on identifying correlations between weather conditions, pollution levels and population, as well as forecasting future pollution trends.
+
+# Observation:
+
+Despite the outlier countries having almost half the population of other cities, they contribute significantly more PM2.5 and PM10 particles. The difference in pollution levels is almost double between 15:00 and 19:00, which is usually the busiest part of the day due to commutes from school or work.
+
+This disparity could indicate that some cities have better pollution management systems in place, which reduces atmospheric pollutants, or that other cities produce far more emissions. Given the difference in population between the two groups, I believe the former is more likely. This highlights how effective infrastructure and pollution control measures can significantly reduce emissions. To verify this, I could use country development data in cojuction to discover any patterns. 
+
 
 # Data Sources
 
