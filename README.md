@@ -18,7 +18,7 @@ __API Ninjas__: Used to gather population, latitude, and longitude data for city
 
 __Data__: Contains the raw and processed data files in .csv and .json formats.
 
-__Data Analysis__: Contains Jupyter notebooks for analysis and PowerBI reports for visualizations.
+__Analysis.ipynb__ Jupyter notebook for analysis and plots for visualizations.
 
 __Data_ETL__/
 
@@ -36,12 +36,6 @@ __Dockerfile__: Defines the Docker container configuration for the ETL process.
 
 __requirements.txt__: Lists the dependencies required for the project.
 
-# Repository Contents
-
-__Data_ETL__/
-City_selection.py: Script that retrieves population, latitude, and longitude values for selecting major cities.
-
-_Weather_and_Pollution_ETL.py_: Script that extracts weather and pollution data, processes it, and loads it into the PostgreSQL database.
 
 # Future Work
 
