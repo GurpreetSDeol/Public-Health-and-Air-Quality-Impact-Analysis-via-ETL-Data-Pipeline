@@ -1,3 +1,0 @@
-city_id,date_time,local_time,temperature,feels_like,temp_min,temp_max,pressure,humidity,visibility,wind_speed,wind_deg,clouds_all,weather_main,weather_description,weather_icon,sunrise,sunset
-1,2024-09-02 16:00:00,2024-09-03 00:00:00,300.7,304.41,300.12,301.28,1009,82,10000,5.66,200,20,Clouds,few clouds,02n,2024-09-02 20:00:00,2024-09-03 09:00:00
-2,2024-09-02 16:00:00,2024-09-02 20:30:00,303.21,310.21,303.21,303.21,1007,84,4000,2.06,80,40,Mist,mist,50n,2024-09-02 00:00:00,2024-09-02 13:00:00
