@@ -1,12 +1,11 @@
 # Overview
-The goal of this project is to analyse and monitor weather and air pollution data for major global cities using a time series approach. This pipeline extracts real-time data from public APIs, stores it in a PostgreSQL database, and performs exploratory and time series analysis. The project focuses on identifying correlations between weather conditions, pollution levels and population, as well as forecasting future pollution trends.
+The goal of this project is to analyze and monitor the impact of transportation, weather, and air pollution on public health for major global cities using a time series approach. The pipeline extracts real-time data from public APIs, stores it in a PostgreSQL database, and performs exploratory and time series analysis. The project focuses on identifying correlations between public transport usage, weather conditions, pollution levels, and health outcomes, with ongoing efforts to forecast future pollution and its health impacts.
 
-# Observation:
+# Observation so Far:
 
-Despite the outlier countries having almost half the population of other cities, they contribute significantly more PM2.5 and PM10 particles. The difference in pollution levels is almost double between 15:00 and 19:00, which is usually the busiest part of the day due to commutes from school or work.
+Despite outlier cities having a significantly lower population, they contribute disproportionately more PM2.5 and PM10 particles, particularly between 15:00 and 19:00, the busiest time for daily commutes. This suggests that cities with better pollution control measures, or lower emissions, may handle the influx of pollutants more effectively.
 
-This disparity could indicate that some cities have better pollution management systems in place, which reduces atmospheric pollutants, or that other cities produce far more emissions. Given the difference in population between the two groups, I believe the former is more likely. This highlights how effective infrastructure and pollution control measures can significantly reduce emissions. To verify this, I could use country development data in cojuction to discover any patterns. 
-
+Further analysis incorporating country development data could reveal patterns in how urban infrastructure and emissions control policies affect pollution levels, leading to actionable insights on how these cities manage air quality.
 
 # Data Sources
 
@@ -22,15 +21,11 @@ __Analysis.ipynb__ Jupyter notebook for analysis and plots for visualizations.
 
 __Data_ETL__/
 
-SQL_Files: SQL scripts for creating and managing the PostgreSQL database.
-
 City_selection.py: Script to collect population, latitude, and longitude data for city selection.
 
 Weather_and_Pollution_ETL.py: Script for automating the extraction, transformation, and loading of weather and pollution data.
 
 Final_city_data: Processed data in .csv and .json formats.
-
-__Test_Folder__: Contains test files and initial scripts used during the early stages of development.
 
 __Dockerfile__: Defines the Docker container configuration for the ETL process.
 
