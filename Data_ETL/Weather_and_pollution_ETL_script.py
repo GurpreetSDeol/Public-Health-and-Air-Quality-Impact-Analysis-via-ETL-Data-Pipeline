@@ -30,7 +30,6 @@ OW_weather_data = []
 OW_pollution_data = []
 delay = 2
 units = "metric"
-city_data = city_data[:50]
 for city in city_data:
 
      #Load the longitude and latitude data for each city
@@ -237,14 +236,12 @@ def bulk_insert_pandas(df, table_name):
 # Upload data
 try:
     bulk_insert_pandas(weather_data_df, 'weather')
-    weather_data_df.to_csv(weather_csv_path, index=False)
 except Exception as e:
     print(f"Error uploading weather data: {e}")
     weather_data_df.to_csv(weather_csv_path, index=False)
 
 try:
     bulk_insert_pandas(pollution_data_df, 'pollution')
-    pollution_data_df.to_csv(pollution_csv_path, index=False)
 except Exception as e:
     print(f"Error uploading pollution data: {e}")
     pollution_data_df.to_csv(pollution_csv_path, index=False)

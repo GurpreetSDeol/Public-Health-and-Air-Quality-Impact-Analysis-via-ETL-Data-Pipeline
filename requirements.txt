@@ -4,4 +4,5 @@ SQLAlchemy
 pytz
 timezonefinder
 psycopg2
-json_flatten   
+json_flatten
+python-dotenv
