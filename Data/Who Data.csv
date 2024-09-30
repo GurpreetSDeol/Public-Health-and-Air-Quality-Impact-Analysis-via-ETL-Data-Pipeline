@@ -1,0 +1,181 @@
+country_iso,country,year,sex,cause,deaths,city_id
+FRA,France,2019,Male,"Trachea, bronchus, lung cancers",1157.0,27
+JPN,Japan,2019,Female,"Trachea, bronchus, lung cancers",1161.0,1
+CHN,China,2019,Both sexes,Total,1163222.0,3
+SGP,Singapore,2019,Male,Total,1186.0,56
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Female,Chronic obstructive pulmonary disease,1208.0,33
+FRA,France,2019,Female,Lower respiratory infections,1222.0,27
+FRA,France,2019,Male,Stroke,1279.0,27
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Male,Chronic obstructive pulmonary disease,1286.0,33
+KOR,Republic of Korea,2019,Both sexes,Chronic obstructive pulmonary disease,1321.0,30
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Male,Stroke,1325.0,33
+ESP,Spain,2019,Female,Stroke,1334.0,59
+ESP,Spain,2019,Both sexes,Lower respiratory infections,1346.0,59
+ESP,Spain,2019,Both sexes,Chronic obstructive pulmonary disease,1400.0,59
+AUS,Australia,2019,Female,Ischaemic heart disease,1416.0,65
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Both sexes,"Trachea, bronchus, lung cancers",1438.0,33
+FRA,France,2019,Both sexes,Chronic obstructive pulmonary disease,1514.0,27
+KOR,Republic of Korea,2019,Male,"Trachea, bronchus, lung cancers",1619.0,30
+FRA,France,2019,Both sexes,"Trachea, bronchus, lung cancers",1631.0,27
+KOR,Republic of Korea,2019,Male,Stroke,1743.0,30
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Female,Stroke,1757.0,33
+AUS,Australia,2019,Male,Ischaemic heart disease,1790.0,65
+USA,United States of America,2019,Female,"Trachea, bronchus, lung cancers",1812.0,44
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Male,Lower respiratory infections,1861.0,33
+FRA,France,2019,Female,Stroke,1922.0,27
+KOR,Republic of Korea,2019,Female,Stroke,1955.0,30
+USA,United States of America,2019,Male,Lower respiratory infections,1977.0,44
+SGP,Singapore,2019,Both sexes,Total,1983.0,56
+KOR,Republic of Korea,2019,Male,Total,10176.0,30
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Female,Total,10359.0,33
+FRA,France,2019,Both sexes,Ischaemic heart disease,10370.0,27
+USA,United States of America,2019,Both sexes,Chronic obstructive pulmonary disease,10551.0,44
+JPN,Japan,2019,Both sexes,Stroke,11018.0,1
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Both sexes,Ischaemic heart disease,11234.0,33
+IND,India,2019,Male,"Trachea, bronchus, lung cancers",11920.0,2
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Male,Total,11970.0,33
+CHN,China,2019,Both sexes,"Trachea, bronchus, lung cancers",112147.0,3
+CHN,China,2019,Male,Chronic obstructive pulmonary disease,114314.0,3
+IND,India,2019,Male,Chronic obstructive pulmonary disease,115530.0,2
+IND,India,2019,Both sexes,Lower respiratory infections,119117.0,2
+JPN,Japan,2019,Both sexes,Lower respiratory infections,12467.0,1
+JPN,Japan,2019,Male,Ischaemic heart disease,12620.0,1
+ESP,Spain,2019,Both sexes,Total,13910.0,59
+AUS,Australia,2019,Female,"Trachea, bronchus, lung cancers",130.0,65
+IND,India,2019,Both sexes,Stroke,136976.0,2
+JPN,Japan,2019,Female,Ischaemic heart disease,14727.0,1
+CHN,China,2019,Female,Stroke,150762.0,3
+IND,India,2019,Female,Ischaemic heart disease,158068.0,2
+IND,India,2019,Both sexes,"Trachea, bronchus, lung cancers",16847.0,2
+SGP,Singapore,2019,Both sexes,Stroke,161.1,56
+FRA,France,2019,Both sexes,Total,18916.0,27
+AUS,Australia,2019,Male,Lower respiratory infections,183.2,65
+ESP,Spain,2019,Female,"Trachea, bronchus, lung cancers",185.6,59
+AUS,Australia,2019,Male,"Trachea, bronchus, lung cancers",188.3,65
+KOR,Republic of Korea,2019,Both sexes,Total,19283.0,30
+CHN,China,2019,Female,Ischaemic heart disease,195316.0,3
+CHN,China,2019,Both sexes,Chronic obstructive pulmonary disease,195840.0,3
+USA,United States of America,2019,Male,"Trachea, bronchus, lung cancers",2130.0,44
+USA,United States of America,2019,Female,Lower respiratory infections,2187.0,44
+FRA,France,2019,Both sexes,Lower respiratory infections,2202.0,27
+KOR,Republic of Korea,2019,Both sexes,"Trachea, bronchus, lung cancers",2208.0,30
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Female,Lower respiratory infections,2220.0,33
+ESP,Spain,2019,Both sexes,Stroke,2326.0,59
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Both sexes,Chronic obstructive pulmonary disease,2494.0,33
+AUS,Australia,2019,Female,Total,2509.0,65
+JPN,Japan,2019,Male,"Trachea, bronchus, lung cancers",2656.0,1
+JPN,Japan,2019,Female,Chronic obstructive pulmonary disease,2672.0,1
+AUS,Australia,2019,Male,Total,2804.0,65
+KOR,Republic of Korea,2019,Female,Lower respiratory infections,2858.0,30
+KOR,Republic of Korea,2019,Male,Lower respiratory infections,2966.0,30
+IND,India,2019,Both sexes,Chronic obstructive pulmonary disease,205557.0,2
+CHN,China,2019,Male,Stroke,210485.0,3
+CHN,China,2019,Female,Lower respiratory infections,22101.0,3
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Both sexes,Total,22329.0,33
+AUS,Australia,2019,Female,Lower respiratory infections,225.7,65
+IND,India,2019,Male,Ischaemic heart disease,246073.0,2
+CHN,China,2019,Male,Ischaemic heart disease,247207.0,3
+JPN,Japan,2019,Both sexes,Ischaemic heart disease,27347.0,1
+AUS,Australia,2019,Female,Chronic obstructive pulmonary disease,279.7,65
+USA,United States of America,2019,Female,Ischaemic heart disease,29023.0,44
+CHN,China,2019,Male,Lower respiratory infections,29364.0,3
+KOR,Republic of Korea,2019,Male,Ischaemic heart disease,3035.0,30
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Both sexes,Stroke,3082.0,33
+KOR,Republic of Korea,2019,Female,Ischaemic heart disease,3199.0,30
+FRA,France,2019,Both sexes,Stroke,3200.0,27
+AUS,Australia,2019,Both sexes,Ischaemic heart disease,3206.0,65
+KOR,Republic of Korea,2019,Both sexes,Stroke,3697.0,30
+JPN,Japan,2019,Both sexes,"Trachea, bronchus, lung cancers",3817.0,1
+ESP,Spain,2019,Female,Ischaemic heart disease,3871.0,59
+USA,United States of America,2019,Both sexes,"Trachea, bronchus, lung cancers",3942.0,44
+JPN,Japan,2019,Female,Total,30412.0,1
+JPN,Japan,2019,Male,Total,30945.0,1
+AUS,Australia,2019,Male,Chronic obstructive pulmonary disease,312.3,65
+AUS,Australia,2019,Both sexes,"Trachea, bronchus, lung cancers",318.2,65
+SGP,Singapore,2019,Female,"Trachea, bronchus, lung cancers",32.07,56
+SGP,Singapore,2019,Male,Chronic obstructive pulmonary disease,31.54,56
+AUS,Australia,2019,Male,Stroke,330.0,65
+SGP,Singapore,2019,Female,Ischaemic heart disease,333.5,56
+CHN,China,2019,Female,"Trachea, bronchus, lung cancers",34609.0,3
+SGP,Singapore,2019,Female,Lower respiratory infections,342.0,56
+USA,United States of America,2019,Male,Ischaemic heart disease,36341.0,44
+CHN,China,2019,Both sexes,Stroke,361247.0,3
+IND,India,2019,Female,Total,378569.0,2
+SGP,Singapore,2019,Male,Lower respiratory infections,384.0,56
+SGP,Singapore,2019,Both sexes,Chronic obstructive pulmonary disease,39.09,56
+JPN,Japan,2019,Male,Chronic obstructive pulmonary disease,4035.0,1
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Both sexes,Lower respiratory infections,4081.0,33
+ESP,Spain,2019,Male,Ischaemic heart disease,4103.0,59
+USA,United States of America,2019,Male,Stroke,4129.0,44
+USA,United States of America,2019,Both sexes,Lower respiratory infections,4164.0,44
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Female,Ischaemic heart disease,4522.0,33
+IND,India,2019,Female,"Trachea, bronchus, lung cancers",4927.0,2
+IND,India,2019,Both sexes,Ischaemic heart disease,404141.0,2
+AUS,Australia,2019,Both sexes,Lower respiratory infections,408.8,65
+ESP,Spain,2019,Female,Chronic obstructive pulmonary disease,416.5,59
+USA,United States of America,2019,Female,Total,44267.0,44
+CHN,China,2019,Both sexes,Ischaemic heart disease,442523.0,3
+AUS,Australia,2019,Female,Stroke,458.0,65
+FRA,France,2019,Female,"Trachea, bronchus, lung cancers",473.7,27
+CHN,China,2019,Female,Total,484314.0,3
+USA,United States of America,2019,Male,Total,49608.0,44
+USA,United States of America,2019,Male,Chronic obstructive pulmonary disease,5031.0,44
+JPN,Japan,2019,Male,Stroke,5073.0,1
+FRA,France,2019,Female,Ischaemic heart disease,5085.0,27
+FRA,France,2019,Male,Ischaemic heart disease,5285.0,27
+AUS,Australia,2019,Both sexes,Total,5313.0,65
+USA,United States of America,2019,Female,Chronic obstructive pulmonary disease,5520.0,44
+USA,United States of America,2019,Female,Stroke,5724.0,44
+KOR,Republic of Korea,2019,Both sexes,Lower respiratory infections,5824.0,30
+JPN,Japan,2019,Female,Lower respiratory infections,5907.0,1
+JPN,Japan,2019,Female,Stroke,5946.0,1
+IND,India,2019,Male,Total,504068.0,2
+KOR,Republic of Korea,2019,Female,Chronic obstructive pulmonary disease,507.1,30
+CHN,China,2019,Both sexes,Lower respiratory infections,51466.0,3
+IND,India,2019,Male,Lower respiratory infections,57995.0,2
+KOR,Republic of Korea,2019,Female,"Trachea, bronchus, lung cancers",588.8,30
+AUS,Australia,2019,Both sexes,Chronic obstructive pulmonary disease,591.9,65
+KOR,Republic of Korea,2019,Both sexes,Ischaemic heart disease,6233.0,30
+ESP,Spain,2019,Female,Total,6473.0,59
+JPN,Japan,2019,Male,Lower respiratory infections,6560.0,1
+JPN,Japan,2019,Both sexes,Chronic obstructive pulmonary disease,6707.0,1
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Male,Ischaemic heart disease,6712.0,33
+IND,India,2019,Female,Lower respiratory infections,61122.0,2
+JPN,Japan,2019,Both sexes,Total,61357.0,1
+SGP,Singapore,2019,Male,"Trachea, bronchus, lung cancers",61.89,56
+SGP,Singapore,2019,Male,Ischaemic heart disease,629.4,56
+IND,India,2019,Female,Stroke,64425.0,2
+USA,United States of America,2019,Both sexes,Ischaemic heart disease,65364.0,44
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Female,"Trachea, bronchus, lung cancers",652.3,33
+ESP,Spain,2019,Female,Lower respiratory infections,665.9,59
+FRA,France,2019,Female,Chronic obstructive pulmonary disease,671.6,27
+CHN,China,2019,Male,Total,678908.0,3
+ESP,Spain,2019,Male,"Trachea, bronchus, lung cancers",678.8,59
+ESP,Spain,2019,Male,Lower respiratory infections,679.7,59
+ESP,Spain,2019,Male,Total,7437.0,59
+ESP,Spain,2019,Both sexes,Ischaemic heart disease,7974.0,59
+IND,India,2019,Male,Stroke,72551.0,2
+SGP,Singapore,2019,Both sexes,Lower respiratory infections,726.1,56
+CHN,China,2019,Male,"Trachea, bronchus, lung cancers",77538.0,3
+GBR,United Kingdom of Great Britain and Northern Ireland,2019,Male,"Trachea, bronchus, lung cancers",786.2,33
+AUS,Australia,2019,Both sexes,Stroke,788.1,65
+SGP,Singapore,2019,Male,Stroke,79.13,56
+SGP,Singapore,2019,Female,Total,797.1,56
+SGP,Singapore,2019,Female,Chronic obstructive pulmonary disease,7.55,56
+CHN,China,2019,Female,Chronic obstructive pulmonary disease,81526.0,3
+KOR,Republic of Korea,2019,Male,Chronic obstructive pulmonary disease,813.8,30
+SGP,Singapore,2019,Female,Stroke,82.0,56
+FRA,France,2019,Male,Chronic obstructive pulmonary disease,842.0,27
+ESP,Spain,2019,Both sexes,"Trachea, bronchus, lung cancers",864.5,59
+IND,India,2019,Both sexes,Total,882638.0,2
+KOR,Republic of Korea,2019,Female,Total,9107.0,30
+FRA,France,2019,Female,Total,9374.0,27
+FRA,France,2019,Male,Total,9542.0,27
+USA,United States of America,2019,Both sexes,Stroke,9853.0,44
+IND,India,2019,Female,Chronic obstructive pulmonary disease,90027.0,2
+USA,United States of America,2019,Both sexes,Total,93874.0,44
+SGP,Singapore,2019,Both sexes,"Trachea, bronchus, lung cancers",93.96,56
+SGP,Singapore,2019,Both sexes,Ischaemic heart disease,962.8,56
+FRA,France,2019,Male,Lower respiratory infections,980.0,27
+ESP,Spain,2019,Male,Chronic obstructive pulmonary disease,983.3,59
+ESP,Spain,2019,Male,Stroke,992.2,59

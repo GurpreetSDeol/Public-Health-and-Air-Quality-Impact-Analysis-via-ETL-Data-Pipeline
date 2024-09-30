@@ -10,7 +10,8 @@ CREATE TABLE cities (
     longitude FLOAT NOT NULL,
     population INTEGER NOT NULL,
     is_capital BOOLEAN,
-    country_iso VARCHAR(100) NOT NULL
+    country_iso VARCHAR(100) NOT NULL,
+    national_population INTEGER NOT NULL
 );
 
 -- Dimension Table: Weather
