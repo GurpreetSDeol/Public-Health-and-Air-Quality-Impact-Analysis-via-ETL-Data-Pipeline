@@ -3,6 +3,9 @@ The goal of this project is to analyze and monitor the impact of weather and air
 
 # Observation so Far:
 
+The analysis reveals that while Delhi and Shanghai exhibit nearly double the pollution levels of Singapore, their pollution levels relative to population size are comparable to those of Singapore, Barcelona, and Sydney. In contrast, cities like Tokyo, London, New York, Seoul, and Paris show significantly lower pollution levels despite their larger populations, indicating that urban infrastructure may effectively mitigate pollution in these areas.
+
+Furthermore, analyzing deaths related to atmospheric diseases proves challenging due to national-level data collection, which complicates the ability to accurately determine correlations between air pollution and health outcomes. The data suggests that ischaemic heart disease is the leading cause of deaths related to atmospheric conditions, particularly in New York (69.6%) and Sydney (60.3%). In contrast, lower respiratory infections account for only 30.2% of deaths in Seoul and 36.8% in Singapore, whereas they represent just 4.4% of total deaths in New York and Shanghai.
 
 # Data Sources
 
