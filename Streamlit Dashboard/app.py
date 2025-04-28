@@ -7,10 +7,10 @@ import plotly.colors as pc
 # Title for the dashboard
 st.title("🌍 Air Quality and Public Health Dashboard")
 
-pollution_df = pd.read_csv('Data/Pollution.csv')
-weather_df = pd.read_csv('Data/Weather.csv')
-cities_df = pd.read_csv('Data/Cities.csv')
-who_df = pd.read_csv('Data/Who Data.csv')
+pollution_df = pd.read_csv('Streamlit Dashboard/Data/Pollution.csv')
+weather_df = pd.read_csv('Streamlit Dashboard/Data/Weather.csv')
+cities_df = pd.read_csv('Streamlit Dashboard/Data/Cities.csv')
+who_df = pd.read_csv('Streamlit Dashboard/Data/Who Data.csv')
 
 pollution_df['date_time'] = pd.to_datetime(pollution_df['date_time']).dt.floor('H')
 weather_df['date_time'] = pd.to_datetime(weather_df['date_time']).dt.floor('H')
