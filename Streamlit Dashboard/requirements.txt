@@ -1,5 +1,0 @@
-streamlit
-psycopg2
-pandas
-plotly
-python-dotenv
