@@ -572,8 +572,9 @@ elif mode == "Live data":
 
             
 
-    weather_df = weather_df.merge(cities_df[["city_id", "city_name"]], on="city_id", how="left")
-    pollution_df = pollution_df.merge(cities_df[["city_id", "city_name"]], on="city_id", how="left")
+
+    pollution_df = pollution_df.merge(cities_df[[ 'city_name']], on='city_id')
+    weather_df = weather_df.merge(cities_df[['city_name']], on='city_id')
       
 
 
