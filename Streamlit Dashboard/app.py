@@ -541,7 +541,7 @@ elif mode == "Live data":
 
     # Fetch live data
 
-    OW_api_key = st.secrets('OW_api_key')
+    OW_api_key = st.secrets['OW_api_key']
  
 
 # Load data containing cities for the API
