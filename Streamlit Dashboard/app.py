@@ -563,25 +563,26 @@ elif mode == "Live data":
             st.session_state.pollution_df = fetcher.process_pollution_data()
             st.success("Data fetched successfully!")
 
-            # Get latest data from session state
-            weather_df = st.session_state.weather_df
-            pollution_df = st.session_state.pollution_df
-        
-            # Only display if there's data
-            
-            # Merge with cities_df
-            pollution_df = pollution_df.merge(cities_df[["city_id", "city_name"]], on="city_id", how="left")
-            weather_df = weather_df.merge(cities_df[["city_id", "city_name"]], on="city_id", how="left")
-        
-            # Display
-            st.subheader("Pollution Data")
-            st.dataframe(pollution_df.head())
-        
-            st.subheader("Weather Data")
-            st.dataframe(weather_df.head())
-            
-                      
-                
+    # Get latest data from session state
+    weather_df = st.session_state.weather_df
+    pollution_df = st.session_state.pollution_df
+
+    # Only display if there's data
+    if not pollution_df.empty and not weather_df.empty:
+        # Merge with cities_df
+        pollution_df = pollution_df.merge(cities_df[["city_id", "city_name"]], on="city_id", how="left")
+        weather_df = weather_df.merge(cities_df[["city_id", "city_name"]], on="city_id", how="left")
+
+        # Display
+        st.subheader("Pollution Data")
+        st.dataframe(pollution_df.head())
+
+        st.subheader("Weather Data")
+        st.dataframe(weather_df.head())
+    else:
+        st.info("No live data available. Please click 'Fetch' to load it.")
+
+
                 
             st.subheader("💨 Pollution Insights")
             st.write("This section visualizes the pollution levels of various pollutants such as PM₂.₅, PM₁₀, NO₂, O₃, CO, SO₂, and NH₃ across selected cities.")
