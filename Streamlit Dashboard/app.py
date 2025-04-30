@@ -631,7 +631,7 @@ elif mode == "Live data":
                 x="city_name",
                 y=selected_pollutant,
                 color="city_name",
-                color_discrete_sequence=city_color_map,
+                color_discrete_map=city_color_map,
                 labels={"city_name": "City", selected_pollutant.upper(): "Pollutant Level"},
                 title=f"Current {selected_pollutant_label} Levels by City"
             )
@@ -695,7 +695,7 @@ elif mode == "Live data":
                 x="city_name",
                 y=selected_weather_param,
                 color="city_name",
-                color_discrete_sequence=city_color_map,
+                color_discrete_map=city_color_map,
                 labels={"city_name": "City", selected_weather_param.capitalize(): "Weather Value"},
                 title=f" Current {selected_weather_label.capitalize()} by City"
             )
