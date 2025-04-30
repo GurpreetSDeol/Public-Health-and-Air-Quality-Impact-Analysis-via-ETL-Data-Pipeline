@@ -13,10 +13,15 @@ st.title("🌍 Air Quality and Public Health Dashboard")
 cities_df = pd.read_csv('Streamlit Dashboard/Data/Cities.csv')
 cities_df['marker_size'] = (cities_df['population'] / cities_df['population'].max()) * 50
 
-# Define color palette for cities
+# Define color palette
 city_colors = pc.qualitative.Plotly
 
+# Function to return a consistent city-color map
+def get_city_color_map(cities_df):
+    unique_cities = cities_df['city_name'].unique()
+    return {city: color for city, color in zip(unique_cities, city_colors)}
 
+city_color_map = get_city_color_map(cities_df)
 
 #City Section
 
@@ -231,7 +236,7 @@ if mode == "Historical data":
         y=selected_pollutant,
         color='city_name', 
         markers=True,
-        color_discrete_map={city_name: color for city_name, color in zip(cities_df['city_name'].unique(), city_colors)},
+        color_discrete_map=city_color_map,
         labels={
             'hour_of_day': 'Hour of Day',
             selected_pollutant: f'Avg {selected_pollutant.upper()}',
@@ -363,7 +368,7 @@ if mode == "Historical data":
         y=selected_weather_param,
         color='city_name',  
         markers=True,
-        color_discrete_map={city_name: color for city_name, color in zip(cities_df['city_name'].unique(), city_colors)},
+        color_discrete_map=city_color_map,
         labels={
             'hour_of_day': 'Hour of Day',
             selected_weather_param: f'Avg {selected_weather_param.capitalize()}',
@@ -387,7 +392,7 @@ if mode == "Historical data":
         x='city_name',
         y=selected_weather_param,
         color='city_name',  
-        color_discrete_map={city_name: color for city_name, color in zip(cities_df['city_name'].unique(), city_colors)},
+        color_discrete_map=city_color_map,
         labels={
             'city_name': 'City',
             selected_weather_param: f"Avg {selected_weather_param.capitalize()}"
@@ -626,7 +631,7 @@ elif mode == "Live data":
                 x="city_name",
                 y=selected_pollutant,
                 color="city_name",
-                color_discrete_sequence=city_colors,
+                color_discrete_sequence=city_color_map,
                 labels={"city_name": "City", selected_pollutant.upper(): "Pollutant Level"},
                 title=f"Current {selected_pollutant_label} Levels by City"
             )
@@ -690,7 +695,7 @@ elif mode == "Live data":
                 x="city_name",
                 y=selected_weather_param,
                 color="city_name",
-                color_discrete_sequence=city_colors,
+                color_discrete_sequence=city_color_map,
                 labels={"city_name": "City", selected_weather_param.capitalize(): "Weather Value"},
                 title=f" Current {selected_weather_label.capitalize()} by City"
             )
