@@ -6,17 +6,6 @@ from json_flatten import flatten
 from datetime import datetime
 import pytz
 from timezonefinder import TimezoneFinder
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-OW_api_key = os.getenv('OW_api_key')
-
-# Load data containing cities for the API
-json_save_path = rf'Data\Final_city_data.json'
-with open(json_save_path) as f:
-    city_data = json.load(f)
 
 class WeatherPollutionFetcher:
     def __init__(self, api_key, city_data, delay=2, units="metric"):
