@@ -570,126 +570,124 @@ elif mode == "Live data":
             st.subheader("Weather Data")
             st.dataframe(weather_df.head())
 
-            
 
-
-    pollution_df = pollution_df.merge(cities_df[[ 'city_name']], on='city_id')
-    weather_df = weather_df.merge(cities_df[['city_name']], on='city_id')
-      
-
-
-    st.subheader("💨 Pollution Insights")
-    st.write("This section visualizes the pollution levels of various pollutants such as PM₂.₅, PM₁₀, NO₂, O₃, CO, SO₂, and NH₃ across selected cities.")
-
-
-    #Pollution cards
-
-    # 1. City with the Highest Average Pollution (based on selected pollutant)
-    avg_pollutant_by_city = pollution_df.groupby('city_name')[selected_pollutant].mean().reset_index()
-    max_avg_pollution_city = avg_pollutant_by_city.loc[avg_pollutant_by_city[selected_pollutant].idxmax()]
-    max_avg_pollution_city_name = max_avg_pollution_city['city_name']
-    max_avg_pollution_value = max_avg_pollution_city[selected_pollutant]
-
-    # 2. City with the Lowest Average Pollution (based on selected pollutant)
-    min_avg_pollution_city = avg_pollutant_by_city.loc[avg_pollutant_by_city[selected_pollutant].idxmin()]
-    min_avg_pollution_city_name = min_avg_pollution_city['city_name']
-    min_avg_pollution_value = min_avg_pollution_city[selected_pollutant]
-
-
-    # Cards: City with Highest Average Pollution and City with Lowest Average Pollution
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.metric(
-            label=f"🏙️ City with Highest Average {selected_pollutant.upper()} Pollution", 
-            value=max_avg_pollution_city_name,
-            delta=f"{max_avg_pollution_value:.2f} µg/m³"
-        )
-
-    with col2:
-        st.metric(
-            label=f"🏙️ City with Lowest Average {selected_pollutant.upper()} Pollution", 
-            value=min_avg_pollution_city_name,
-            delta=f"{min_avg_pollution_value:.2f} µg/m³"
-        )
-
-
-    # Plot: Pollutant levels by city
-    if not pollution_df.empty:
-        pollution = pollution_df.groupby("city_name")[selected_pollutant].mean().reset_index()
-       
-        fig_pollution = px.bar(
-            pollution,
-            x="city_name",
-            y=selected_pollutant,
-            color="city_name",
-            color_discrete_sequence=city_colors,
-            labels={"city_name": "City", selected_pollutant.upper(): "Pollutant Level"},
-            title=f"Current {selected_pollutant_label} Levels by City"
-        )
-        fig_pollution.update_layout(showlegend=False, xaxis_title="City",
-        yaxis_title=f"{selected_pollutant_label} Concentration (µg/m³)")
-
-        st.plotly_chart(fig_pollution, use_container_width=True)
-
-
-    #Weather cards
-
-    st.subheader("🌤️ Weather Insights")
-    st.write("This section focuses on weather parameters like temperature, humidity, and wind speed.")
-
-
-    # 1. City with the Highest Temperature
-    max_temp_city = weather_df.loc[weather_df['temperature'].idxmax()]
-    max_temp_city_name = max_temp_city['city_name']
-    max_temp_value = max_temp_city['temperature']
-
-    # 2. City with the Lowest Temperature
-    min_temp_city = weather_df.loc[weather_df['temperature'].idxmin()]
-    min_temp_city_name = min_temp_city['city_name']
-    min_temp_value = min_temp_city['temperature']
-
-    # 3. City with the Highest Humidity
-    max_humidity_city = weather_df.loc[weather_df['humidity'].idxmax()]
-    max_humidity_city_name = max_humidity_city['city_name']
-    max_humidity_value = max_humidity_city['humidity']
-
-    # Cards: City with Highest Temperature, City with Lowest Temperature, City with Highest Humidity
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        st.metric(
-            label="🌡️ City with Highest Temperature", 
-            value=f"{max_temp_city_name}",
-            delta=f"{max_temp_value}°C"
-        )
-
-    with col2:
-        st.metric(
-            label="❄️ City with Lowest Temperature", 
-            value=f"{min_temp_city_name}",
-            delta=f"{min_temp_value}°C"
-        )
-
-    with col3:
-        st.metric(
-            label="💧 City with Highest Humidity", 
-            value=f"{max_humidity_city_name}",
-            delta=f"{max_humidity_value}%"
-        )        
-
-# Plot: Weather values by city
-    if not weather_df.empty:
-        weather = weather_df.groupby("city_name")[selected_weather_param].mean().reset_index()
-
-        fig_weather = px.bar(
-            weather,
-            x="city_name",
-            y=selected_weather_param,
-            color="city_name",
-            color_discrete_sequence=city_colors,
-            labels={"city_name": "City", selected_weather_param.capitalize(): "Weather Value"},
-            title=f" Current {selected_weather_label.capitalize()} by City"
-        )
-        fig_weather.update_layout(showlegend=False,xaxis_title="City",yaxis_title=f"{selected_weather_label} ({selected_unit})")
-        st.plotly_chart(fig_weather, use_container_width=True)
+            weather_df = weather_df.merge(cities_df[["city_id", "city_name"]], on="city_id", how="left")
+            pollution_df = pollution_df.merge(cities_df[["city_id", "city_name"]], on="city_id", how="left")
+              
+        
+        
+            st.subheader("💨 Pollution Insights")
+            st.write("This section visualizes the pollution levels of various pollutants such as PM₂.₅, PM₁₀, NO₂, O₃, CO, SO₂, and NH₃ across selected cities.")
+        
+        
+            #Pollution cards
+        
+            # 1. City with the Highest Average Pollution (based on selected pollutant)
+            avg_pollutant_by_city = pollution_df.groupby('city_name')[selected_pollutant].mean().reset_index()
+            max_avg_pollution_city = avg_pollutant_by_city.loc[avg_pollutant_by_city[selected_pollutant].idxmax()]
+            max_avg_pollution_city_name = max_avg_pollution_city['city_name']
+            max_avg_pollution_value = max_avg_pollution_city[selected_pollutant]
+        
+            # 2. City with the Lowest Average Pollution (based on selected pollutant)
+            min_avg_pollution_city = avg_pollutant_by_city.loc[avg_pollutant_by_city[selected_pollutant].idxmin()]
+            min_avg_pollution_city_name = min_avg_pollution_city['city_name']
+            min_avg_pollution_value = min_avg_pollution_city[selected_pollutant]
+        
+        
+            # Cards: City with Highest Average Pollution and City with Lowest Average Pollution
+            col1, col2 = st.columns(2)
+        
+            with col1:
+                st.metric(
+                    label=f"🏙️ City with Highest Average {selected_pollutant.upper()} Pollution", 
+                    value=max_avg_pollution_city_name,
+                    delta=f"{max_avg_pollution_value:.2f} µg/m³"
+                )
+        
+            with col2:
+                st.metric(
+                    label=f"🏙️ City with Lowest Average {selected_pollutant.upper()} Pollution", 
+                    value=min_avg_pollution_city_name,
+                    delta=f"{min_avg_pollution_value:.2f} µg/m³"
+                )
+        
+        
+            # Plot: Pollutant levels by city
+            if not pollution_df.empty:
+                pollution = pollution_df.groupby("city_name")[selected_pollutant].mean().reset_index()
+               
+                fig_pollution = px.bar(
+                    pollution,
+                    x="city_name",
+                    y=selected_pollutant,
+                    color="city_name",
+                    color_discrete_sequence=city_colors,
+                    labels={"city_name": "City", selected_pollutant.upper(): "Pollutant Level"},
+                    title=f"Current {selected_pollutant_label} Levels by City"
+                )
+                fig_pollution.update_layout(showlegend=False, xaxis_title="City",
+                yaxis_title=f"{selected_pollutant_label} Concentration (µg/m³)")
+        
+                st.plotly_chart(fig_pollution, use_container_width=True)
+        
+        
+            #Weather cards
+        
+            st.subheader("🌤️ Weather Insights")
+            st.write("This section focuses on weather parameters like temperature, humidity, and wind speed.")
+        
+        
+            # 1. City with the Highest Temperature
+            max_temp_city = weather_df.loc[weather_df['temperature'].idxmax()]
+            max_temp_city_name = max_temp_city['city_name']
+            max_temp_value = max_temp_city['temperature']
+        
+            # 2. City with the Lowest Temperature
+            min_temp_city = weather_df.loc[weather_df['temperature'].idxmin()]
+            min_temp_city_name = min_temp_city['city_name']
+            min_temp_value = min_temp_city['temperature']
+        
+            # 3. City with the Highest Humidity
+            max_humidity_city = weather_df.loc[weather_df['humidity'].idxmax()]
+            max_humidity_city_name = max_humidity_city['city_name']
+            max_humidity_value = max_humidity_city['humidity']
+        
+            # Cards: City with Highest Temperature, City with Lowest Temperature, City with Highest Humidity
+            col1, col2, col3 = st.columns(3)
+        
+            with col1:
+                st.metric(
+                    label="🌡️ City with Highest Temperature", 
+                    value=f"{max_temp_city_name}",
+                    delta=f"{max_temp_value}°C"
+                )
+        
+            with col2:
+                st.metric(
+                    label="❄️ City with Lowest Temperature", 
+                    value=f"{min_temp_city_name}",
+                    delta=f"{min_temp_value}°C"
+                )
+        
+            with col3:
+                st.metric(
+                    label="💧 City with Highest Humidity", 
+                    value=f"{max_humidity_city_name}",
+                    delta=f"{max_humidity_value}%"
+                )        
+        
+        # Plot: Weather values by city
+            if not weather_df.empty:
+                weather = weather_df.groupby("city_name")[selected_weather_param].mean().reset_index()
+        
+                fig_weather = px.bar(
+                    weather,
+                    x="city_name",
+                    y=selected_weather_param,
+                    color="city_name",
+                    color_discrete_sequence=city_colors,
+                    labels={"city_name": "City", selected_weather_param.capitalize(): "Weather Value"},
+                    title=f" Current {selected_weather_label.capitalize()} by City"
+                )
+                fig_weather.update_layout(showlegend=False,xaxis_title="City",yaxis_title=f"{selected_weather_label} ({selected_unit})")
+                st.plotly_chart(fig_weather, use_container_width=True)
