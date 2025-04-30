@@ -10,7 +10,7 @@ import json
 st.title("🌍 Air Quality and Public Health Dashboard")
 
 # Load Cities Data (Used in both modes)
-cities_df = pd.read_csv('Data\Cities.csv')
+cities_df = pd.read_csv('Streamlit Dashboard/Data/Cities.csv')
 cities_df['marker_size'] = (cities_df['population'] / cities_df['population'].max()) * 50
 
 # Define color palette for cities
@@ -163,9 +163,9 @@ if mode == "Historical data":
     st.write("This mode uses historical data for pollution, weather, and health analysis. Note that the insights may be limited due to inconsistencies in the available data.")
 
 
-    pollution_df = pd.read_csv('Data\Pollution.csv')
-    weather_df = pd.read_csv('Data\Weather.csv')
-    who_df = pd.read_csv('Data\Who Data.csv')
+    pollution_df = pd.read_csv('Streamlit Dashboard/Data/Pollution.csv')
+    weather_df = pd.read_csv('Streamlit Dashboard/Data/Weather.csv')
+    who_df = pd.read_csv('Streamlit Dashboard/Data/Who Data.csv')
 
     pollution_df['date_time'] = pd.to_datetime(pollution_df['date_time']).dt.floor('H')
     weather_df['date_time'] = pd.to_datetime(weather_df['date_time']).dt.floor('H')
@@ -545,7 +545,7 @@ elif mode == "Live data":
  
 
 # Load data containing cities for the API
-    json_save_path = rf'Data\Final_city_data.json'
+    json_save_path = rf'Streamlit Dashboard/Data/Final_city_data.json'
     with open(json_save_path) as f:
         city_data = json.load(f)
 
