@@ -7,8 +7,23 @@ from API_data import WeatherPollutionFetcher
 import json 
 
 # Title for the dashboard
-st.title("🌍 Air Quality and Public Health Dashboard")
-st.write("Explore how air pollution and weather conditions vary across cities using real-time and historical data. This dashboard allows you to monitor key air quality indicators, compare pollution levels, analyse weather impacts, and gain insights into environmental trends across different urban areas. It also incorporates World Health Organization (WHO) data to examine the health impacts of ambient air pollution, including city-level death rates per 100,000 people.")
+#st.title("🌍 Air Quality and Public Health Dashboard")
+st.markdown("""
+# 🌍 Public Health & Air Quality Dashboard
+
+Explore how air pollution, weather conditions, and health outcomes vary across cities using both real-time and historical data.
+
+This interactive dashboard enables you to:
+- Analyse historical data or fetch live data via the OpenWeather API.
+- Compare pollution and weather indicators across multiple cities.
+- Visualise air quality trends and assess their health impacts.
+- Examine World Health Organization (WHO) data on deaths attributed to ambient air pollution (per 100,000 population).
+
+
+[🔗 View the GitHub Repository](https://github.com/GurpreetSDeol/Public-Health-and-Air-Quality-Impact-Analysis-via-ETL-Data-Pipeline)
+""")
+
+
 
 # Load Cities Data (Used in both modes)
 cities_df = pd.read_csv('Streamlit Dashboard/Data/Cities.csv')
