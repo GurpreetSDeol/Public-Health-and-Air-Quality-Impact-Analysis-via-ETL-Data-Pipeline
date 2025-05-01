@@ -59,7 +59,8 @@ The dashboard is hosted publicly here:
 │   ├── Populate_Cities_table.sql                     # SQL script for populating the Cities Table
 │   └── Update_Fact_Table.sql                         # SQL script to update fact table t
 │
-├── Power BI/
+├── Power BI and Analysis/
+│   ├── Analysis.ipynb                                # Initial Jupyter notebook exploratory data analysis         
 │   └── Power BI Report.pbix                          # Inital Power BI dashboard file for local analysis 
 │
 ├── Streamlit Dashboard/
