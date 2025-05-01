@@ -8,6 +8,7 @@ import json
 
 # Title for the dashboard
 st.title("🌍 Air Quality and Public Health Dashboard")
+st.write("Explore how air pollution and weather conditions vary across cities using real-time and historical data. This dashboard allows you to monitor key air quality indicators, compare pollution levels, analyse weather impacts, and gain insights into environmental trends across different urban areas. It also incorporates World Health Organization (WHO) data to examine the health impacts of ambient air pollution, including city-level death rates per 100,000 people.")
 
 # Load Cities Data (Used in both modes)
 cities_df = pd.read_csv('Streamlit Dashboard/Data/Cities.csv')
