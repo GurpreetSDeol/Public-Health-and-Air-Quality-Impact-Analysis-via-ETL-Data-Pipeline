@@ -1,42 +1,92 @@
-# Overview
-The goal of this project is to analyze and monitor the impact of weather and air pollution on public health for major global cities using a time series approach. The pipeline extracts real-time data from public APIs, stores it in a PostgreSQL database, and performs exploratory and time series analysis. The project focuses on identifying correlations between weather conditions, pollution levels, and health outcomes, with ongoing efforts to forecast future pollution and its health impacts.
+# 🌍 Public Health and Air Quality Impact Analysis
 
-# Observation so Far:
+This project explores the relationship between **air pollution**, **weather conditions**, and **public health outcomes** across cities. By integrating real-time data with historical insights and World Health Organization (WHO) statistics, the dashboard provides an interactive and data-driven view of environmental trends and their impact on human health.
 
-The analysis reveals that while Delhi and Shanghai exhibit nearly double the pollution levels of Singapore, their pollution levels relative to population size are comparable to those of Singapore, Barcelona, and Sydney. In contrast, cities like Tokyo, London, New York, Seoul, and Paris show significantly lower pollution levels despite their larger populations, indicating that urban infrastructure may effectively mitigate pollution in these areas.
+🔗 **Live App**: [Public Health & Air Quality Dashboard](https://public-health-and-air-quality-dashboard.streamlit.app/)
 
-Furthermore, analyzing deaths related to atmospheric diseases proves challenging due to national-level data collection, which complicates the ability to accurately determine correlations between air pollution and health outcomes. The data suggests that ischaemic heart disease is the leading cause of deaths related to atmospheric conditions, particularly in New York (69.6%) and Sydney (60.3%). In contrast, lower respiratory infections account for only 30.2% of deaths in Seoul and 36.8% in Singapore, whereas they represent just 4.4% of total deaths in New York and Shanghai.
+---
 
-# Data Sources
+## 🚀 Project Summary
 
-__OpenWeather API__: Provides real-time weather and air pollution data.
+The project follows a full data pipeline approach:
 
-__API Ninjas__: Used to gather population, latitude, and longitude data for city selection.
+1. **Data Ingestion (ETL)**: A Dockerised Python script fetches real-time pollution and weather data from the OpenWeather API and stores it in a local PostgreSQL database.  
+2. **Data Storage**: A structured PostgreSQL database stores and organises both real-time and static data (such as city metadata and WHO health indicators).  
+3. **Data Visualisation**: Data is visualised in two formats:
+   - A **Streamlit dashboard** for real-time and historical interactive analysis.
+   - A **Power BI report** for additional exploratory insights.
+4. **Final Outcome**: The Streamlit app acts as the final user-facing product, combining live and historical analysis in an intuitive UI.
 
-__World Health Organisation__: Data containing health statistics for each city. 
+---
 
-# Project Structure and Contents
+## 📊 Streamlit Dashboard
 
-__Data__: Contains the raw and processed data files in .csv and .json formats.
+The Streamlit dashboard is the core component of this project. It enables users to:
 
-__Analysis.ipynb__ Jupyter notebook for analysis and plots for visualizations.
+- View **real-time** pollution and weather data across selected cities using the OpenWeather API.
+- Explore **historical data** visualisations based on previously collected and processed datasets.
+- Analyse **WHO health data** (e.g. deaths per 100,000 due to ambient air pollution) by city.
+- Select cities, timeframes, pollutants, and weather variables to customise the insights.
+- Monitor trends, assess environmental risks, and make data-driven conclusions.
 
-__Data_ETL__/
+The dashboard is hosted publicly here:  
+👉 [https://public-health-and-air-quality-dashboard.streamlit.app](https://public-health-and-air-quality-dashboard.streamlit.app)
 
-City_selection.py: Script to collect population, latitude, and longitude data for city selection.
+---
 
-Weather_and_Pollution_ETL.py: Script for automating the extraction, transformation, and loading of weather and pollution data.
+## 🔁 Project Flow
 
-Final_city_data: Processed data in .csv and .json formats.
+```
 
-__Dockerfile__: Defines the Docker container configuration for the ETL process.
+                                                           
+  OpenWeather API   --->   Docker ETL Script   --->   PostgreSQL DB   --->   Streamlit Dashboard                                                     
+                                                                                   
+                  
+```
 
-__requirements.txt__: Lists the dependencies required for the project.
+---
 
-__Pollution and Weather Power BI Report__: Power BI report containing dashboards.
+## 📁 Repository Structure
 
+```
+├── Docker/
+│   ├── Data_ETL/                                     #Scripts used for selecting cities
+│   ├── Dockerfile                                    # Docker setup for the ETL pipeline
+│   └── Weather_and_pollution_ETL_script.py           # Python script to fetch data and store it in PostgreSQL
+│
+├── SQL files/
+│   ├── Database_creation.sql                         # SQL scripts for schema creation
+│   ├── Populate_Cities_table.sql                     # SQL script for populating the Cities Table
+│   └── Update_Fact_Table.sql                         # SQL script to update fact table t
+│
+├── Power BI/
+│   └── Power BI Report.pbix                          # Inital Power BI dashboard file for local analysis 
+│
+├── Streamlit Dashboard/
+│   ├── app.py                                        # Main Streamlit app UI and logic
+│   ├── API_data.py                                   # Core class handling API interaction and data processing
+│   └── Data/                                         # Supporting data files 
+│
+└── README.md                                         # Project overview and instructions
+```
 
-# Future Work
+---
 
-Forecasting Models: Expand forecasting capabilities to predict pollution levels using time series data.
-Additional Data Sources: Integrate more datasets, such as industrial activity or traffic, to improve the analysis of pollution factors.
+## 🧰 Technologies Used
+
+- **Python** (ETL, Streamlit)
+- **Docker** (containerised ETL pipeline)
+- **PostgreSQL** (relational database)
+- **Streamlit** (interactive dashboard)
+- **Plotly** (visualisation)
+- **Pandas** (data manipulation)
+- **Power BI** (local dashboard)
+
+---
+
+## 📌 Future Improvements
+
+- Add authentication to the Streamlit app.
+- Automate ETL via cloud scheduling or a CI/CD pipeline.
+- Integrate additional health or environmental datasets.
+
