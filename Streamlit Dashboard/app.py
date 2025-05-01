@@ -7,9 +7,8 @@ from API_data import WeatherPollutionFetcher
 import json 
 
 # Title for the dashboard
-#st.title("🌍 Air Quality and Public Health Dashboard")
+st.title("🌍 Air Quality and Public Health Dashboard")
 st.markdown("""
-# 🌍 Public Health & Air Quality Dashboard
 
 Explore how air pollution, weather conditions, and health outcomes vary across cities using both real-time and historical data.
 
