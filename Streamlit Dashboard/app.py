@@ -552,7 +552,7 @@ if mode == "Historical data":
 elif mode == "Live data":
 
     st.subheader("Live Data")
-    st.write("Click 'Fetch' to retrieve real-time weather and pollution data for the selected cities.")
+    st.write("Click 'Fetch most recent data' to retrieve real-time weather and pollution data for the selected cities.")
 
     # Load data containing cities for the API
     OW_api_key = st.secrets['OW_api_key']
