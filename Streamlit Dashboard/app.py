@@ -19,7 +19,8 @@ This interactive dashboard enables you to:
 - Examine World Health Organization (WHO) data on deaths attributed to ambient air pollution (per 100,000 population).
 
 
-[🔗 View the GitHub Repository](https://github.com/GurpreetSDeol/Public-Health-and-Air-Quality-Impact-Analysis-via-ETL-Data-Pipeline)
+[🔗 View the GitHub Repository](https://github.com/GurpreetSDeol/Public-Health-and-Air-Quality-Impact-Analysis-via-ETL-Data-Pipeline)  
+[🔗 Portfolio Website](https://gurpreetsdeol.github.io/)
 """)
 
 
