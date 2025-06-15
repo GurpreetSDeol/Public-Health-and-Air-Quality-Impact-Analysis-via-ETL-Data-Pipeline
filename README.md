@@ -50,14 +50,14 @@ The dashboard is hosted publicly here:
 
 ```
 ├── Docker/
-│   ├── Data_ETL/                                     #Scripts used for selecting cities
+│   ├── Data_ETL/                                     # Scripts used for selecting cities
 │   ├── Dockerfile                                    # Docker setup for the ETL pipeline
 │   └── Docker_ETL_Script.py                          # Python script to fetch data and store it in PostgreSQL
 │
 ├── SQL files/
 │   ├── Database_creation.sql                         # SQL scripts for schema creation
 │   ├── Populate_Cities_table.sql                     # SQL script for populating the Cities Table
-│   └── Update_Fact_Table.sql                         # SQL script to update fact table t
+│   └── Update_Fact_Table.sql                         # SQL script to update fact table 
 │
 ├── Power BI and Analysis/
 │   ├── Analysis.ipynb                                # Initial Jupyter notebook exploratory data analysis         
@@ -68,6 +68,8 @@ The dashboard is hosted publicly here:
 │   ├── API_data.py                                   # Core class handling API interaction and data processing
 │   └── Data/                                         # Supporting data files 
 │
+├── City_Selection.ipynb                              # Script for selecting cities
+|
 └── README.md                                         # Project overview and instructions
 ```
 
