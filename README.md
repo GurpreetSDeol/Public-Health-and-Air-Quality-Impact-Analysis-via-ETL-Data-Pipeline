@@ -52,7 +52,7 @@ The dashboard is hosted publicly here:
 ├── Docker/
 │   ├── Data_ETL/                                     #Scripts used for selecting cities
 │   ├── Dockerfile                                    # Docker setup for the ETL pipeline
-│   └── Weather_and_pollution_ETL_script.py           # Python script to fetch data and store it in PostgreSQL
+│   └── Docker_ETL_Script.py                          # Python script to fetch data and store it in PostgreSQL
 │
 ├── SQL files/
 │   ├── Database_creation.sql                         # SQL scripts for schema creation
@@ -87,7 +87,6 @@ The dashboard is hosted publicly here:
 
 ## 📌 Future Improvements
 
-- Add authentication to the Streamlit app.
 - Automate ETL via cloud scheduling or a CI/CD pipeline.
 - Integrate additional health or environmental datasets.
 
