@@ -225,7 +225,7 @@ if mode == "Historical data":
     # Pollution Section
 
 
-    st.subheader("💨 Pollution Insights")
+    st.subheader(" Pollution Insights")
     st.write("This section visualizes the pollution levels of various pollutants such as PM₂.₅, PM₁₀, NO₂, O₃, CO, SO₂, and NH₃ across selected cities. You can explore how pollutant levels change over time and their relationship with city population.")
 
 
