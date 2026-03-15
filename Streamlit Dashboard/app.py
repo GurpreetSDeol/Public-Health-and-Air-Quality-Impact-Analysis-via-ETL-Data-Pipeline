@@ -7,7 +7,7 @@ from API_data import WeatherPollutionFetcher
 import json 
 
 # Title for the dashboard
-st.title("🌍 Air Quality and Public Health Dashboard")
+st.title(" Air Quality and Public Health Dashboard")
 st.markdown("""
 
 Explore how air pollution, weather conditions, and health outcomes vary across cities using both real-time and historical data.
@@ -19,8 +19,8 @@ This interactive dashboard enables you to:
 - Examine World Health Organization (WHO) data on deaths attributed to ambient air pollution (per 100,000 population).
 
 
-[🔗 View the GitHub Repository](https://github.com/GurpreetSDeol/Public-Health-and-Air-Quality-Impact-Analysis-via-ETL-Data-Pipeline)  
-[🔗 Portfolio Website](https://gurpreetsdeol.github.io/)
+[ View the GitHub Repository](https://github.com/GurpreetSDeol/Public-Health-and-Air-Quality-Impact-Analysis-via-ETL-Data-Pipeline)  
+[ Portfolio Website](https://gurpreetsdeol.github.io/)
 """)
 
 
@@ -41,7 +41,7 @@ city_color_map = get_city_color_map(cities_df)
 
 #City Section
 
-st.subheader("📊 Key Population Insights")
+st.subheader(" Key Population Insights")
 st.write("This section provides an overview of the cities, their population sizes, and geographical locations. The map below visualizes the cities based on population, and you'll also find key population metrics for the most populated cities.")
 
 
@@ -92,21 +92,21 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.metric(
-        label="🌆 Most Populated City", 
+        label=" Most Populated City", 
         value=highest_city_name, 
         delta=f"Population: {highest_city_population:,}"
     )
 
 with col2:
     st.metric(
-        label="🗺️ National Population", 
+        label=" National Population", 
         value=country_name, 
         delta=f"Population: {national_population:,}"
     )
 
 st.divider()
 
-st.subheader("🗺️ 2D Map: Cities by Population Size")
+st.subheader(" 2D Map: Cities by Population Size")
 st.write("Each city is represented based on its geographic location. Marker size and color intensity reflect population.")
 st.plotly_chart(fig)
 
@@ -336,21 +336,21 @@ if mode == "Historical data":
 
     with col1:
         st.metric(
-            label=f"🏙️ City with Highest Average {selected_pollutant.upper()} Pollution", 
+            label=f" City with Highest Average {selected_pollutant.upper()} Pollution", 
             value=max_avg_pollution_city_name,
             delta=f"{max_avg_pollution_value:.2f} µg/m³"
         )
 
     with col2:
         st.metric(
-            label=f"🏙️ City with Highest {selected_pollutant.upper()} Pollution", 
+            label=f" City with Highest {selected_pollutant.upper()} Pollution", 
             value=max_pollution_city_name,
             delta=f"{max_pollution_value:.2f} µg/m³"
         )
 
     with col3:
         st.metric(
-            label=f"⏰ Hour with Highest {selected_pollutant.upper()} Pollution", 
+            label=f" Hour with Highest {selected_pollutant.upper()} Pollution", 
             value=max_pollution_hour_time,
             delta=f"{max_pollution_hour_value:.2f} µg/m³"
         )
@@ -364,7 +364,7 @@ if mode == "Historical data":
     # --- Weather Section
 
 
-    st.subheader("🌤️ Weather Insights")
+    st.subheader(" Weather Insights")
     st.write("This section focuses on weather parameters like temperature, humidity, and wind speed. It provides insights into how weather conditions vary across cities over the course of a day.")
 
 
@@ -446,21 +446,21 @@ if mode == "Historical data":
 
     with col1:
         st.metric(
-            label="🌡️ City with Highest Temperature", 
+            label=" City with Highest Temperature", 
             value=f"{max_temp_city_name}",
             delta=f"{max_temp_value}°C"
         )
 
     with col2:
         st.metric(
-            label="❄️ City with Lowest Temperature", 
+            label=" City with Lowest Temperature", 
             value=f"{min_temp_city_name}",
             delta=f"{min_temp_value}°C"
         )
 
     with col3:
         st.metric(
-            label="💧 City with Highest Humidity", 
+            label=" City with Highest Humidity", 
             value=f"{max_humidity_city_name}",
             delta=f"{max_humidity_value}%"
         )
@@ -485,7 +485,7 @@ if mode == "Historical data":
     )
 
 
-    st.subheader("🌍 WHO Data Insights")
+    st.subheader(" WHO Data Insights")
     st.write("This section incorporates data from the World Health Organization (WHO) about deaths caused by ambient air pollution. You can analyse the impact of pollution on health outcomes across cities, including the number of deaths per 100,000 people.")
 
     # Merge WHO data with the population data from cities_df
@@ -544,14 +544,14 @@ if mode == "Historical data":
 
     with col1:
         st.metric(
-            label="💔 City with Highest Total Deaths", 
+            label=" City with Highest Total Deaths", 
             value=f"{max_total_deaths_city_name}",
             delta=f"{max_total_deaths} deaths"
         )
 
     with col2:
         st.metric(
-            label="💚 City with Lowest Total Deaths", 
+            label=" City with Lowest Total Deaths", 
             value=f"{min_total_deaths_city_name}",
             delta=f"{min_total_deaths} deaths"
         )
@@ -602,7 +602,7 @@ elif mode == "Live data":
         st.dataframe(weather_df.head())
 
                 
-        st.subheader("💨 Pollution Insights")
+        st.subheader(" Pollution Insights")
         st.write("This section visualizes the pollution levels of various pollutants such as PM₂.₅, PM₁₀, NO₂, O₃, CO, SO₂, and NH₃ across selected cities.")
     
     
@@ -625,14 +625,14 @@ elif mode == "Live data":
     
         with col1:
             st.metric(
-                label=f"🏙️ City with Highest Average {selected_pollutant.upper()} Pollution", 
+                label=f" City with Highest Average {selected_pollutant.upper()} Pollution", 
                 value=max_avg_pollution_city_name,
                 delta=f"{max_avg_pollution_value:.2f} µg/m³"
             )
     
         with col2:
             st.metric(
-                label=f"🏙️ City with Lowest Average {selected_pollutant.upper()} Pollution", 
+                label=f" City with Lowest Average {selected_pollutant.upper()} Pollution", 
                 value=min_avg_pollution_city_name,
                 delta=f"{min_avg_pollution_value:.2f} µg/m³"
             )
@@ -659,7 +659,7 @@ elif mode == "Live data":
     
         #Weather cards
     
-        st.subheader("🌤️ Weather Insights")
+        st.subheader(" Weather Insights")
         st.write("This section focuses on weather parameters like temperature, humidity, and wind speed.")
     
     
@@ -683,21 +683,21 @@ elif mode == "Live data":
     
         with col1:
             st.metric(
-                label="🌡️ City with Highest Temperature", 
+                label=" City with Highest Temperature", 
                 value=f"{max_temp_city_name}",
                 delta=f"{max_temp_value}°C"
             )
     
         with col2:
             st.metric(
-                label="❄️ City with Lowest Temperature", 
+                label=" City with Lowest Temperature", 
                 value=f"{min_temp_city_name}",
                 delta=f"{min_temp_value}°C"
             )
     
         with col3:
             st.metric(
-                label="💧 City with Highest Humidity", 
+                label=" City with Highest Humidity", 
                 value=f"{max_humidity_city_name}",
                 delta=f"{max_humidity_value}%"
             )        
