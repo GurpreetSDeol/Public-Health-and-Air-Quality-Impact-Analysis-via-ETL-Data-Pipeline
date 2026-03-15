@@ -1,12 +1,12 @@
-# 🌍 Public Health and Air Quality Impact Analysis
+#  Public Health and Air Quality Impact Analysis
 
 This project explores the relationship between **air pollution**, **weather conditions**, and **public health outcomes** across cities. By integrating real-time data with historical insights and World Health Organization (WHO) statistics, the dashboard provides an interactive and data-driven view of environmental trends and their impact on human health.
 
-🔗 **Live App**: [Public Health & Air Quality Dashboard](https://public-health-and-air-quality-dashboard.streamlit.app/)
+ **Live App**: [Public Health & Air Quality Dashboard](https://public-health-and-air-quality-dashboard.streamlit.app/)
 
 ---
 
-## 🚀 Project Summary
+##  Project Summary
 
 The project follows a full data pipeline approach:
 
@@ -19,7 +19,7 @@ The project follows a full data pipeline approach:
 
 ---
 
-## 📊 Streamlit Dashboard
+##  Streamlit Dashboard
 
 The Streamlit dashboard is the core component of this project. It enables users to:
 
@@ -30,11 +30,11 @@ The Streamlit dashboard is the core component of this project. It enables users 
 - Monitor trends, assess environmental risks, and make data-driven conclusions.
 
 The dashboard is hosted publicly here:  
-👉 [https://public-health-and-air-quality-dashboard.streamlit.app](https://public-health-and-air-quality-dashboard.streamlit.app)
+ [https://public-health-and-air-quality-dashboard.streamlit.app](https://public-health-and-air-quality-dashboard.streamlit.app)
 
 ---
 
-## 🔁 Project Flow
+## Project Flow
 
 ```
 
@@ -46,7 +46,7 @@ The dashboard is hosted publicly here:
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 ├── Docker/
@@ -75,7 +75,7 @@ The dashboard is hosted publicly here:
 
 ---
 
-## 🧰 Technologies Used
+##  Technologies Used
 
 - **Python** (ETL, Streamlit)
 - **Docker** (containerised ETL pipeline)
@@ -87,7 +87,7 @@ The dashboard is hosted publicly here:
 
 ---
 
-## 📌 Future Improvements
+##  Future Improvements
 
 - Automate ETL via cloud scheduling or a CI/CD pipeline.
 - Integrate additional health or environmental datasets.
